@@ -19,6 +19,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+        };
+
+        shift-tab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <11 12>;
+        };
     };
 
     macros {
@@ -29,21 +39,18 @@
             label = "TO_LAYER_0";
         };
 
-        test_macro: test_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&none &kp LS(H) &kp E &kp L &kp L &kp O &kp EXCL &kp H &kp O &kp G &kp E &kp EXCL>,
-                <&macro_press>;
-
-            label = "TEST_MACRO";
-        };
-
         to_ipad_layer: to_ipad_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 11>;
+            bindings = <&bt BT_SEL 1 &to 10>;
             label = "TO_IPAD_LAYER";
+        };
+
+        to_mac_layer: to_mac_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "TO_MAC_LAYER";
         };
     };
 
@@ -183,6 +190,19 @@
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
+        iPad_layer {
+            bindings = <
+&kp Q             &kp W         &kp E         &kp R                      &kp T                                         &kp Y        &kp U  &lt 8 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                      &kp G        &trans            &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B        &lt 7 COLON       &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 LANG_ZENKAKUHANKAKU  &lt 9 SPACE  &lt 1 INT_KANA    &kp BACKSPACE  &lt 2 ENTER                             &kp UNDER
+            >;
+
+            sensor-bindings =
+                <&scroll_up_down>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
         setting_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
@@ -190,19 +210,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
-        };
-
-        iPad_layer {
-            bindings = <
-&kp Q             &kp W         &kp E         &kp R                      &kp T                                         &kp Y        &kp U  &lt 8 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                      &kp G        &trans            &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B        &lt 7 COLON       &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 LANG_ZENKAKUHANKAKU  &lt 9 SPACE  &lt 1 INT_KANA    &kp BACKSPACE  &lt 2 ENTER                             &kp NUMBER_0
-            >;
-
-            sensor-bindings =
-                <&scroll_up_down>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
     };
 };
