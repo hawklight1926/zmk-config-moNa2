@@ -29,31 +29,21 @@
             label = "TO_LAYER_0";
         };
 
-        connect_ipad_layer: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&macro_tap>, <&to 11>;
-
-            label = "NEW_MACRO";
-        };
-
-        auto_mouse_layer: auto_mouse_layer {
+        test_macro: test_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mmv MOVE_UP &mmv MOVE_DOWN>,
-                <&macro_tap_time 200>,
-                <&to 3>;
+                <&none &kp LS(H) &kp E &kp L &kp L &kp O &kp EXCL &kp H &kp O &kp G &kp E &kp EXCL>,
+                <&macro_press>;
 
-            label = "AUTO_MOUSE_LAYER";
+            label = "TEST_MACRO";
         };
 
-        connect_mac_layer: connect_mac_layer {
+        to_ipad_layer: to_ipad_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&macro_tap>, <&to 0>;
-
-            label = "CONNECT_MAC_LAYER";
+            bindings = <&bt BT_SEL 1 &to 11>;
+            label = "TO_IPAD_LAYER";
         };
     };
 
@@ -160,10 +150,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &to_ipad_layer  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans          &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                    &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
