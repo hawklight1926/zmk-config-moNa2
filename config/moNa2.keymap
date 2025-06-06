@@ -22,12 +22,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <12 13>;
         };
 
         shift-tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <11 10>;
+            key-positions = <11 12>;
         };
 
         mouse_left_click {
@@ -43,6 +43,16 @@
         mouse_middle_click {
             bindings = <&mkp MCLK>;
             key-positions = <18 20>;
+        };
+
+        mouse_button_4 {
+            bindings = <&mkp MB4>;
+            key-positions = <6 7>;
+        };
+
+        mouse_button_5 {
+            bindings = <&mkp MB5>;
+            key-positions = <7 8>;
         };
     };
 
@@ -93,10 +103,10 @@
 
         mac_default {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R        &kp T                                      &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G        &trans         &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 3 SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &lt 7 COLON    &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 LANG2  &lt 8 SPACE  &lt 1 LANG1    &kp BACKSPACE  &lt 2 ENTER                             &kp UNDERSCORE
+&kp Q               &kp W         &kp E         &kp R        &kp T                                      &kp Y        &kp U  &kp I      &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S         &kp D         &kp F        &kp G        &trans         &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 3 SQT
+&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V        &kp B        &lt 7 COLON    &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL           &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 LANG2  &lt 8 SPACE  &lt 1 LANG1    &kp BACKSPACE  &lt 2 ENTER                             &kp UNDERSCORE
             >;
 
             sensor-bindings =
@@ -106,10 +116,10 @@
 
         mac_layer_fn {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
+&trans            &trans        &trans            &kp C_SNAPSHOT  &kp C_RECORD                    &kp F1    &kp F2    &kp F3        &kp F4     &kp F5
+&kp LEFT_CONTROL  &trans        &trans            &trans          &trans        &trans    &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp F10
+&kp LEFT_SHIFT    &trans        &trans            &trans          &trans        &trans    &trans  &trans    &trans    &trans        &trans     &kp F11
+&trans            &kp LEFT_ALT  &kp LEFT_COMMAND  &trans          &trans        &trans    &trans  &trans                                       &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOL_DN K_VOL_UP>;
@@ -128,10 +138,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp K_SCROLL_UP    &mkp MB4  &trans    &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp K_SCROLL_DOWN  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                           &trans
+&trans  &trans  &trans  &trans  &trans                    &kp K_SCROLL_UP       &mkp MB4  &trans    &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp K_SCROLL_DOWN     &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_AC_SCROLL_UP    &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_AC_SCROLL_DOWN                                &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
