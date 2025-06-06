@@ -116,10 +116,10 @@
 
         mac_layer_fn {
             bindings = <
-&trans            &trans        &trans            &kp C_SNAPSHOT  &kp C_RECORD                    &kp F1    &kp F2    &kp F3        &kp F4     &kp F5
-&kp LEFT_CONTROL  &trans        &trans            &trans          &trans        &trans    &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp F10
-&kp LEFT_SHIFT    &trans        &trans            &trans          &trans        &trans    &trans  &trans    &trans    &trans        &trans     &kp F11
-&trans            &kp LEFT_ALT  &kp LEFT_COMMAND  &trans          &trans        &trans    &trans  &trans                                       &kp F12
+&trans            &trans        &trans            &kp LG(LS(NUMBER_4))  &kp LS(LG(N5))                    &kp F1    &kp F2    &kp F3        &kp F4     &kp F5
+&kp LEFT_CONTROL  &trans        &kp C_PLAY_PAUSE  &kp C_NEXT            &trans          &trans    &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp F10
+&kp LEFT_SHIFT    &trans        &trans            &kp K_NEXT            &trans          &trans    &trans  &trans    &trans    &trans        &trans     &kp F11
+&trans            &kp LEFT_ALT  &kp LEFT_COMMAND  &trans                &trans          &trans    &trans  &trans                                       &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOL_DN K_VOL_UP>;
@@ -133,15 +133,15 @@
 &trans                      &trans           &trans           &trans           &trans        &trans                     &trans          &trans                                                                     &kp PIPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp K_SCROLL_UP       &mkp MB4  &trans    &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp K_SCROLL_DOWN     &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_AC_SCROLL_UP    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_AC_SCROLL_DOWN                                &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB4  &trans    &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
