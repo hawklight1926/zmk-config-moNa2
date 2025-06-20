@@ -60,14 +60,14 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 7 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 8 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
 
         to_ipad_layer: to_ipad_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 9>;
+            bindings = <&bt BT_SEL 1 &to 10>;
             label = "TO_IPAD_LAYER";
         };
 
@@ -104,9 +104,9 @@
         mac_default {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                      &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G        &trans         &kp SQT        &kp H        &kp J  &kp K      &kp L    &lt 3 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &lt 7 COLON    &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 LANG2  &lt 3 SPACE  &lt 2 LANG1    &kp BACKSPACE  &lt 1 ENTER                             &lt 2 GRAVE
+&kp A             &kp S         &kp D         &kp F        &kp G        &trans         &kp SQT        &kp H        &kp J  &kp K      &kp L    &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &lt 8 COLON    &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 LANG2  &lt 4 SPACE  &lt 2 LANG1    &kp BACKSPACE  &lt 3 ENTER                             &lt 2 GRAVE
             >;
 
             sensor-bindings =
@@ -126,6 +126,17 @@
         };
 
         mac_layer_fn {
+            bindings = <
+&trans          &trans        &trans            &trans  &trans                    &trans    &trans    &trans        &trans     &trans
+&trans          &trans        &trans            &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&kp LEFT_SHIFT  &trans        &trans            &trans  &trans  &trans    &trans  &trans    &trans    &trans        &trans     &trans
+&kp LCTRL       &kp LEFT_ALT  &kp LEFT_COMMAND  &trans  &trans  &trans    &trans  &trans                                       &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp K_VOL_DN K_VOL_UP>;
+        };
+
+        mac_layer_arrow {
             bindings = <
 &kp ESC           &kp F7        &kp F8            &kp F9  &kp F12                                  &kp C_PREV  &kp C_PP  &kp C_NEXT    &kp C_MUTE  &trans
 &kp LEFT_CONTROL  &kp F4        &kp F5            &kp F6  &kp F11  &trans    &kp LS(LG(NUMBER_4))  &kp LEFT    &kp DOWN  &kp UP_ARROW  &kp RIGHT   &trans
@@ -195,8 +206,8 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R             &kp T                                             &kp Y        &kp U  &lt 0 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F             &kp G        &trans                &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &lt 7 COLON           &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 INT_HENKAN  &lt 7 SPACE  &lt 7 INT_MUHENKAN    &kp BACKSPACE  &lt 6 ENTER                             &kp DEL
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &lt 8 COLON           &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 INT_HENKAN  &lt 8 SPACE  &lt 8 INT_MUHENKAN    &kp BACKSPACE  &lt 7 ENTER                             &kp DEL
             >;
 
             sensor-bindings =
@@ -208,8 +219,8 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                      &kp T                                         &kp Y        &kp U  &lt 0 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                      &kp G        &trans            &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B        &lt 7 COLON       &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 LANG_ZENKAKUHANKAKU  &lt 8 SPACE  &lt 2 INT_KANA    &kp BACKSPACE  &lt 1 ENTER                             &kp UNDER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B        &lt 8 COLON       &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 LANG_ZENKAKUHANKAKU  &lt 9 SPACE  &lt 2 INT_KANA    &kp BACKSPACE  &lt 1 ENTER                             &kp UNDER
             >;
 
             sensor-bindings =
