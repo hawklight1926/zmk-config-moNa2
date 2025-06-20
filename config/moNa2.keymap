@@ -133,7 +133,7 @@
 &kp LCTRL            &kp LEFT_ALT  &kp LEFT_COMMAND  &trans        &trans        &trans       &trans  &trans                                 &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
         };
 
         mac_layer_fn {
