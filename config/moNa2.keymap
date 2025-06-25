@@ -88,10 +88,7 @@
         pinchi_test_b: pinchi_test_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_COMMAND &msc SCRL_UP>,
-                <&macro_release>;
+            bindings = <&macro_press>, <&kp LEFT_COMMAND &msc SCRL_UP>;
 
             label = "PINCHI_TEST_B";
         };
