@@ -85,7 +85,7 @@
             label = "PINCHI_TEST_A";
         };
 
-        pinchi_test_b: pinchi_test_b {
+        pinchi_test_c: pinchi_test_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp LEFT_COMMAND &msc SCRL_UP>;
@@ -154,8 +154,8 @@
         mac_layer_fn {
             bindings = <
 &kp ESC           &kp F7        &kp F8            &kp F9  &kp F12                                  &kp C_PREV      &kp C_PP  &kp C_NEXT  &kp C_MUTE  &trans
-&kp LEFT_CONTROL  &kp F4        &kp F5            &kp F6  &kp F11  &trans    &kp LS(LG(NUMBER_4))  &pinchi_test_a  &trans    &trans      &trans      &trans
-&kp LEFT_SHIFT    &kp F1        &kp F2            &kp F3  &kp F10  &trans    &kp LS(LG(NUMBER_5))  &pinchi_test_b  &trans    &trans      &trans      &trans
+&kp LEFT_CONTROL  &kp F4        &kp F5            &kp F6  &kp F11  &trans    &kp LS(LG(NUMBER_4))  &pinchi_test_c  &trans    &trans      &trans      &trans
+&kp LEFT_SHIFT    &kp F1        &kp F2            &kp F3  &kp F10  &trans    &kp LS(LG(NUMBER_5))  &trans          &trans    &trans      &trans      &trans
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &trans  &trans   &trans    &trans                &trans                                            &trans
             >;
 
